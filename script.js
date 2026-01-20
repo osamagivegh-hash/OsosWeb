@@ -74,18 +74,90 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Apply animation classes to elements
-    const animatedElements = document.querySelectorAll('.card, .hero-text, .hero-image-wrapper, .service-card, .feature-item, .step');
+    const animatedElements = document.querySelectorAll('.card, .service-showcase-card, .feature-item, .step');
 
     animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         // Add staggered delay for grid items
-        if (el.classList.contains('card') || el.classList.contains('service-card')) {
+        if (el.classList.contains('card') || el.classList.contains('service-showcase-card')) {
             el.style.transitionDelay = `${(index % 3) * 100}ms`;
         }
         observer.observe(el);
     });
+
+    // --- Hero Slider ---
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.slide-arrow.prev');
+    const nextBtn = document.querySelector('.slide-arrow.next');
+    let currentSlide = 1;
+    let slideInterval;
+
+    function goToSlide(slideNum) {
+        // Remove active from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(ind => ind.classList.remove('active'));
+
+        // Add active to current slide and indicator
+        const targetSlide = document.querySelector(`.slide[data-slide="${slideNum}"]`);
+        const targetIndicator = document.querySelector(`.indicator[data-slide="${slideNum}"]`);
+
+        if (targetSlide) targetSlide.classList.add('active');
+        if (targetIndicator) targetIndicator.classList.add('active');
+
+        currentSlide = slideNum;
+    }
+
+    function nextSlide() {
+        const next = currentSlide >= slides.length ? 1 : currentSlide + 1;
+        goToSlide(next);
+    }
+
+    function prevSlide() {
+        const prev = currentSlide <= 1 ? slides.length : currentSlide - 1;
+        goToSlide(prev);
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(slideInterval);
+    }
+
+    // Event listeners for slider
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
+
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+            const slideNum = parseInt(indicator.dataset.slide);
+            goToSlide(slideNum);
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    });
+
+    // Start auto-sliding
+    if (slides.length > 0) {
+        startAutoSlide();
+    }
 
     // --- Contact Form Handling (Formspree) ---
     const contactForm = document.getElementById('contactForm');

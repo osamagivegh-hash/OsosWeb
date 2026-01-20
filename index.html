@@ -23,11 +23,17 @@
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
+    <!-- Header - Professional -->
+    <header class="header header-pro">
         <div class="container header-container">
             <div class="logo">
-                <span class="logo-text">أُسُس ويب</span>
+                <div class="logo-icon">
+                    <i class="ph-fill ph-code"></i>
+                </div>
+                <div class="logo-content">
+                    <span class="logo-text">أُسُس ويب</span>
+                    <span class="logo-tagline">حلول رقمية متكاملة</span>
+                </div>
             </div>
             <nav class="nav">
                 <a href="#services-showcase">خدماتنا</a>
@@ -50,25 +56,86 @@
         <a href="#contact" class="btn btn-primary">تواصل معنا</a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>موقعك يبدأ من الأساس الصحيح</h1>
-                <p class="hero-description">
-                    نصمم لك موقعاً إلكترونياً يجذب عملائك ويخدم تجارتك، بدون أي تعقيدات تقنية. ركز في مشروعك واترك الويب
-                    علينا.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary btn-lg">ابدأ موقعك الآن</a>
-                    <a href="#how-it-works" class="btn btn-text">كيف نشتغل؟ <i class="ph ph-arrow-left"></i></a>
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="slides-container">
+            <!-- Slide 1: Web Design -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%);"></div>
+                <div class="slide-particles"></div>
+                <div class="container slide-content">
+                    <div class="slide-text">
+                        <span class="slide-tag"><i class="ph ph-desktop"></i> تصميم مواقع</span>
+                        <h1>نصمم لك موقعاً يجذب عملائك</h1>
+                        <p>مواقع احترافية للشركات والمتاجر تعكس هوية علامتك التجارية وتحقق أهدافك التجارية.</p>
+                        <div class="slide-actions">
+                            <a href="#contact" class="btn btn-primary btn-lg">ابدأ مشروعك</a>
+                            <a href="#services-showcase" class="btn btn-outline">اكتشف خدماتنا</a>
+                        </div>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="floating-mockup">
+                            <i class="ph ph-browser"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
-                <img src="assets/hero.png" alt="صاحب عمل سعيد يستخدم جهازه اللوحي" class="hero-image">
-                <div class="hero-decoration"></div>
+
+            <!-- Slide 2: ERP Systems -->
+            <div class="slide" data-slide="2">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #1E1B4B 0%, #4C1D95 100%);"></div>
+                <div class="slide-particles"></div>
+                <div class="container slide-content">
+                    <div class="slide-text">
+                        <span class="slide-tag"><i class="ph ph-cube"></i> أنظمة ERP</span>
+                        <h1>أنظمة إدارية تنظم أعمالك</h1>
+                        <p>حلول ERP متكاملة للشركات الصغيرة والمتوسطة تساعدك في إدارة مواردك بكفاءة عالية.</p>
+                        <div class="slide-actions">
+                            <a href="#contact" class="btn btn-primary btn-lg">اطلب عرض سعر</a>
+                            <a href="#services-showcase" class="btn btn-outline">تعرف على المزيد</a>
+                        </div>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="floating-mockup purple">
+                            <i class="ph ph-chart-bar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Technical Support -->
+            <div class="slide" data-slide="3">
+                <div class="slide-bg" style="background: linear-gradient(135deg, #064E3B 0%, #047857 100%);"></div>
+                <div class="slide-particles"></div>
+                <div class="container slide-content">
+                    <div class="slide-text">
+                        <span class="slide-tag"><i class="ph ph-lifebuoy"></i> دعم فني</span>
+                        <h1>دعم فني متواصل لموقعك</h1>
+                        <p>فريق متخصص لصيانة موقعك، إصلاح الأخطاء، وتحديث المحتوى بشكل مستمر على مدار الساعة.</p>
+                        <div class="slide-actions">
+                            <a href="#contact" class="btn btn-primary btn-lg">تواصل الآن</a>
+                            <a href="#services-showcase" class="btn btn-outline">شاهد الخدمات</a>
+                        </div>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="floating-mockup green">
+                            <i class="ph ph-headset"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Slide Indicators -->
+        <div class="slide-indicators">
+            <button class="indicator active" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+            <button class="indicator" data-slide="3"></button>
+        </div>
+
+        <!-- Slide Navigation Arrows -->
+        <button class="slide-arrow prev"><i class="ph ph-caret-right"></i></button>
+        <button class="slide-arrow next"><i class="ph ph-caret-left"></i></button>
     </section>
 
     <!-- Services Showcase Section -->
