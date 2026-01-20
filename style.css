@@ -531,6 +531,10 @@ ul {
     background: linear-gradient(135deg, #DB2777 0%, #EC4899 100%);
 }
 
+.gradient-red {
+    background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+}
+
 /* Service Tag */
 .service-tag {
     display: inline-block;
