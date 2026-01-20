@@ -361,6 +361,188 @@ ul {
     background-color: var(--secondary);
 }
 
+/* Gradient Background for Services Showcase */
+.bg-gradient {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.bg-gradient h2,
+.bg-gradient p {
+    color: white;
+}
+
+.bg-gradient .section-header p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Gold Tag */
+.tag-gold {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+}
+
+/* Services Showcase Grid */
+.services-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .services-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .services-showcase-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Service Showcase Card */
+.service-showcase-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-showcase-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.service-showcase-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.service-showcase-card:hover::before {
+    opacity: 1;
+}
+
+.service-showcase-card h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.service-showcase-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Featured Card */
+.service-showcase-card.featured {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Service Icon Wrapper */
+.service-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* Gradient Colors for Icons */
+.gradient-blue {
+    background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+}
+
+.gradient-purple {
+    background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+}
+
+.gradient-orange {
+    background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+}
+
+.gradient-teal {
+    background: linear-gradient(135deg, #0891B2 0%, #06B6D4 100%);
+}
+
+.gradient-pink {
+    background: linear-gradient(135deg, #DB2777 0%, #EC4899 100%);
+}
+
+/* Service Tag */
+.service-tag {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .section-header {
     margin-bottom: 3rem;
 }
