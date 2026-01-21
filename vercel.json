@@ -1,16 +1,4 @@
 {
-  "buildCommand": "cd task-dashboard && npm install && npm run build",
-  "outputDirectory": ".",
-  "rewrites": [
-    {
-      "source": "/dashboard",
-      "destination": "/task-dashboard/dist/index.html"
-    },
-    {
-      "source": "/dashboard/(.*)",
-      "destination": "/task-dashboard/dist/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -31,7 +19,7 @@
       ]
     },
     {
-      "source": "/task-dashboard/dist/assets/(.*)",
+      "source": "/dashboard/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
