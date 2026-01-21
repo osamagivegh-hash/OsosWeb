@@ -1,0 +1,143 @@
+/* English Version Overrides - LTR Layout */
+
+/* Base LTR overrides */
+body.ltr {
+    direction: ltr;
+    text-align: left;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Header adjustments for LTR */
+body.ltr .header-container {
+    flex-direction: row;
+}
+
+body.ltr .nav {
+    flex-direction: row;
+}
+
+/* Slide arrows swap for LTR */
+body.ltr .slide-arrow.prev {
+    left: 20px;
+    right: auto;
+}
+
+body.ltr .slide-arrow.next {
+    right: 20px;
+    left: auto;
+}
+
+/* Check list alignment */
+body.ltr .check-list li {
+    flex-direction: row;
+}
+
+body.ltr .check-list i {
+    margin-right: 1rem;
+    margin-left: 0;
+}
+
+/* Feature items */
+body.ltr .feature-item {
+    flex-direction: row;
+}
+
+body.ltr .f-icon {
+    margin-right: 1.5rem;
+    margin-left: 0;
+}
+
+/* Steps container */
+body.ltr .steps-container {
+    flex-direction: row;
+}
+
+/* Split layout */
+body.ltr .split-layout {
+    flex-direction: row;
+}
+
+/* Form submit button icon */
+body.ltr #submitBtn i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Mobile menu */
+body.ltr .mobile-menu {
+    left: auto;
+    right: -100%;
+}
+
+body.ltr .mobile-menu.active {
+    right: 0;
+}
+
+/* Footer */
+body.ltr .footer-content {
+    text-align: left;
+}
+
+/* Service showcase cards text alignment */
+body.ltr .service-showcase-card {
+    text-align: left;
+}
+
+body.ltr .section-header {
+    text-align: center;
+}
+
+/* Floating cards positioning adjustment */
+body.ltr .floating-card.c1 {
+    left: 10%;
+    right: auto;
+}
+
+body.ltr .floating-card.c2 {
+    right: 10%;
+    left: auto;
+}
+
+body.ltr .floating-card.c3 {
+    left: 25%;
+    right: auto;
+}
+
+/* Why us section */
+body.ltr .why-us-wrapper {
+    text-align: left;
+}
+
+body.ltr .why-us-header {
+    text-align: left;
+}
+
+/* Adjustments for slide text */
+body.ltr .slide-text {
+    text-align: left;
+}
+
+body.ltr .slide-actions {
+    justify-content: flex-start;
+}
+
+/* CTA Box */
+body.ltr .cta-box {
+    text-align: center;
+}
+
+/* Mobile Menu close button */
+body.ltr .close-menu {
+    right: auto;
+    left: 1rem;
+}
+
+@media (max-width: 768px) {
+    body.ltr .split-layout {
+        flex-direction: column;
+    }
+
+    body.ltr .steps-container {
+        flex-direction: column;
+    }
+}
