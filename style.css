@@ -766,13 +766,15 @@ ul {
 .featured-badge {
     position: absolute;
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
+    left: auto;
     background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 99px;
     font-size: 0.75rem;
     font-weight: 700;
+    z-index: 10;
 }
 
 /* Service Icon Wrapper */

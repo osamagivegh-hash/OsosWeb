@@ -141,3 +141,9 @@ body.ltr .close-menu {
         flex-direction: column;
     }
 }
+
+/* Featured badge for LTR */
+body.ltr .featured-badge {
+    right: auto;
+    left: 1rem;
+}
